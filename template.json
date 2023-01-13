@@ -9,7 +9,6 @@
     },
     "variables": {
         "scriptsUri": "[uri(deployment().properties.templateLink.uri, '.')]"
-	}
     },
     "resources": [
         {
