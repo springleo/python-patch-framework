@@ -8,10 +8,8 @@
         }
     },
     "variables": {
-        "scriptsUri": "[uri(deployment().properties.templateLink.uri, '.')]",
-		"linuxConfiguration": {
-            "disablePasswordAuthentication": true,
-        }
+        "scriptsUri": "[uri(deployment().properties.templateLink.uri, '.')]"
+	}
     },
     "resources": [
         {
