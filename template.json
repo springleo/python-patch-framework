@@ -7,9 +7,7 @@
             "type": "String"
         }
     },
-    "variables": {
-        "scriptsUri": "[uri(deployment().properties.templateLink.uri, '.')]"
-    },
+    "variables": {},
     "resources": [
         {
             "type": "Microsoft.DBforPostgreSQL/flexibleServers",
@@ -40,15 +38,6 @@
                     "dayOfWeek": 0,
                     "startHour": 0,
                     "startMinute": 0
-                },
-                "settings": {
-                    "fileUris": [
-                        "[concat(variables('scriptsUri'), 'init.sh')]",
-                        "[concat(variables('scriptsUri'), 'init.sql')]"
-                    ]
-                },
-                "protectedSettings": {
-                     "commandToExecute": "[concat('bash init.sh \"', parameters('serverName'), '\" \"', parameters('postgresUsername'), '\" \"', parameters('postgresPassword'), '\"')]"
                 }
             }
         },
